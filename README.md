@@ -98,7 +98,7 @@ fintrack-pro/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/YOURUSERNAME/fintrack-pro.git
+git clone https://github.com/pratik-pritam-rout/fintrack-pro.git
 cd fintrack-pro
 ```
 
