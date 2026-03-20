@@ -205,11 +205,6 @@ Open **http://localhost:5173** in your browser.
 | `NODE_ENV` | `development` or `production` |
 | `PORT` | Server port (default: 5000) |
 
----
 
-## 📄 License
 
-This project is licensed under the MIT License.
-
----
 
