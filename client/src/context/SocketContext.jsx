@@ -14,7 +14,7 @@ export function SocketProvider({ children }) {
   useEffect(() => {
     if (!user) return;
 
-    const socket = io('/', { withCredentials: true });
+    const socket = io(import.meta.env.VITE_API_URL, { withCredentials: true });
     socketRef.current = socket;
 
     socket.on('connect', () => {
