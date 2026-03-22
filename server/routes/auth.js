@@ -22,7 +22,7 @@ const signRefreshToken = (id) =>
 
 const cookieOptions = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
+  secure: true,
   sameSite: 'none',
 };
 
@@ -128,8 +128,8 @@ router.post('/logout', protect, async (req, res) => {
       await user.save({ validateBeforeSave: false });
     }
     res
-      .clearCookie('accessToken')
-      .clearCookie('refreshToken')
+      .clearCookie('accessToken', { httpOnly: true, secure: true, sameSite: 'none' })
+      .clearCookie('refreshToken', { httpOnly: true, secure: true, sameSite: 'none' })
       .json({ message: 'Logged out successfully.' });
   } catch (err) {
     res.status(500).json({ message: err.message });
